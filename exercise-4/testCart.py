@@ -20,3 +20,13 @@ def test_items_total():
     new_cart.add_item("Tooth Paste")
     total = new_cart.calculating_totals()
     assert total == 1
+
+def test_add_item_type():
+    new_cart.add_item(2)
+    total = new_cart.calculating_totals()
+    assert total != 2
+    
+def test_remove_item_type():
+    new_cart.remove_item(2)
+    total = new_cart.calculating_totals()
+    assert total != 0
